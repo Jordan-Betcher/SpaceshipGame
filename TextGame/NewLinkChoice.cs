@@ -18,8 +18,32 @@ namespace TextGame
 
         public void activate()
         {
+            Console.
             //Opens the url (string) in the default browser for that computer
-            Process.Start(url);
+            try
+            {
+                Process.Start(url);
+            }
+            catch
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("Error: ");
+
+
+                Console.ResetColor();
+                Console.Write("Could not open a web browser with: \"");
+
+
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write(url);
+                
+                Console.ResetColor();
+                Console.Write("\"");
+
+                Console.WriteLine();
+                Console.ResetColor();
+                Console.ReadLine();
+            }
         }
 
         public string getActivationDescription()
