@@ -1,0 +1,35 @@
+﻿using System;
+using System.Diagnostics;
+
+namespace TextGame
+{
+    internal class NewLinkChoice : Choice
+    {
+        private string activationString;
+        private string activationDescription;
+        private string url;
+
+        public NewLinkChoice(string activationString, string activationDescription, string url)
+        {
+            this.activationString = activationString;
+            this.activationDescription = activationDescription;
+            this.url = url;
+        }
+
+        public void activate()
+        {
+            //Opens the url (string) in the default browser for that computer
+            Process.Start(url);
+        }
+
+        public string getActivationDescription()
+        {
+            return activationDescription;
+        }
+
+        public string getActivationString()
+        {
+            return activationString;
+        }
+    }
+}

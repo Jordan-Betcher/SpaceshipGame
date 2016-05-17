@@ -2,12 +2,12 @@
 
 namespace TextGame
 {
-    public class NewMenu<menu> : Choice where menu : Menu, new()
+    public class NewMenuChoice<menu> : Choice where menu : Menu, new()
     {
         private string activationString;
         private string activationDescription;
 
-        public NewMenu(String activationString, String activationDescription)
+        public NewMenuChoice(String activationString, String activationDescription)
         {
             this.activationString = activationString;
             this.activationDescription = activationDescription;
