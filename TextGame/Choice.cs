@@ -2,7 +2,7 @@
 {
     interface Choice
     {
-        string activationString();
+        string getActivationString();
         string getActivationDescription();
         void activate();
     }

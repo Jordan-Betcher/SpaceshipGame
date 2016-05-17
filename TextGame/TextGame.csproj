@@ -49,6 +49,7 @@
     <Compile Include="Hull.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="Menu.cs" />
+    <Compile Include="Choices\NewMenuChoice.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="PlayerShip.cs" />
     <Compile Include="Program.cs" />

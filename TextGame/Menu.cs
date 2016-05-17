@@ -25,7 +25,7 @@ namespace TextGame
             Console.Write("Type \"");
 
             Console.ForegroundColor = choiceColor;
-            Console.Write(choice.activationString());
+            Console.Write(choice.getActivationString());
 
             Console.ResetColor();
             Console.Write("\" to ");
@@ -46,7 +46,7 @@ namespace TextGame
             {
                 Choice choice = choices[i];
 
-                if (input.Equals(choice.activationString().ToLower()))
+                if (input.Equals(choice.getActivationString().ToLower()))
                 {
                     choice.activate();
                 }
@@ -59,7 +59,7 @@ namespace TextGame
         {
             if(defaultChoice != null)
             {
-                if (input.Equals("") || input.Equals(defaultChoice.activationString()))
+                if (input.Equals("") || input.Equals(defaultChoice.getActivationString()))
                 {
                     defaultChoice.activate();
                 }

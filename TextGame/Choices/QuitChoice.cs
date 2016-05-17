@@ -9,7 +9,7 @@ namespace TextGame
             Program.isPlayerPlaying = false;
         }
 
-        public string activationString()
+        public string getActivationString()
         {
             return "Q";
         }
