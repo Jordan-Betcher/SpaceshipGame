@@ -40,11 +40,13 @@ namespace TextGame
 
         public void runActions(string input)
         {
+            input = input.ToLower();
+
             for (int i = 0; i < choices.Count; i++)
             {
                 Choice choice = choices[i];
 
-                if (input.Equals(choice.activationString()))
+                if (input.Equals(choice.activationString().ToLower()))
                 {
                     choice.activate();
                 }
