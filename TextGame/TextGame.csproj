@@ -47,6 +47,8 @@
     <Compile Include="Choice.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="Hull.cs" />
+    <Compile Include="MainMenu.cs" />
+    <Compile Include="Menu.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="PlayerShip.cs" />
     <Compile Include="Program.cs" />

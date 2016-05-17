@@ -10,86 +10,34 @@ namespace TextGame
     {
 
         public static Boolean isPlayerPlaying = true;
-        public static List<Choice> choices = new List<Choice>();
-        public static Choice defaultChoice = new QuitChoice();
-        private static ConsoleColor choiceColor = ConsoleColor.Cyan;
+        public static Menu currentMenu;
         private static PlayerShip playerShip = new PlayerShip();
 
         static void Main(string[] args)
         {
-            addDefaultChoices();
+            currentMenu = new MainMenu();
             gameLoop();
-        }
-
-        private static void addDefaultChoices()
-        {
-
         }
 
         private static void gameLoop()
         {
             while(isPlayerPlaying)
             {
-                showPossibleActions();
+                Console.Clear();
 
-                String userInput = getInput();
+                currentMenu.printChoices();
 
-                RunActions(userInput);
+                currentMenu.runActions(getInput());
             }
         }
 
-        private static void showPossibleActions()
-        {
-            for(int i = 0; i < choices.Count(); i++)
-            {
-                print(choices[i]);
-            }
-
-            print(defaultChoice);
-        }
-
-        private static void print(Choice choice)
-        {
-            Console.ResetColor();
-            Console.Write("Type \"");
-
-            Console.ForegroundColor = choiceColor;
-            Console.Write(choice.activationString());
-
-            Console.ResetColor();
-            Console.Write("\" to ");
-
-            Console.ForegroundColor = choiceColor;
-            Console.Write(choice.getActivationDescription());
-
-            Console.ResetColor();
-
-            Console.WriteLine();
-        }
+        
 
         private static string getInput()
         {
-            Console.ForegroundColor = choiceColor;
+            Console.ForegroundColor = currentMenu.getChoiceColor();
 
             return Console.ReadLine();
-        }
-
-        private static void RunActions(string userInput)
-        {
-            for (int i = 0; i < choices.Count(); i++)
-            {
-                Choice choice = choices[i];
-
-                if(userInput.Equals(choice.activationString()))
-                {
-                    choice.activate();
-                }
-            }
-
-            if(userInput.Equals("") || userInput.Equals(defaultChoice.activationString()))
-            {
-                defaultChoice.activate();
-            }
         }
     }
 }
