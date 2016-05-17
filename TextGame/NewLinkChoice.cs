@@ -18,7 +18,6 @@ namespace TextGame
 
         public void activate()
         {
-            Console.
             //Opens the url (string) in the default browser for that computer
             try
             {
