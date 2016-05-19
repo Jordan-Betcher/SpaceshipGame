@@ -1,6 +1,6 @@
 ﻿namespace TextGame
 {
-    interface Choice
+    public interface Choice
     {
         string getActivationString();
         string getActivationDescription();

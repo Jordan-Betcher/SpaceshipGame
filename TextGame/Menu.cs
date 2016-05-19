@@ -10,13 +10,47 @@ namespace TextGame
         private List<Choice> choices = new List<Choice>();
         private Choice defaultChoice;
 
+        public Menu()
+        {
 
+        }
+
+        public Menu(Choice defaultChoice) : this()
+        {
+            setDefaultChoice(defaultChoice);
+        }
+
+        /*  Note: For trouble with duplicate choices caused by default
+                it will print both the choice and the default choice if they are both different objects
+                So you have to create a variable to store the choice instead of typing "new CHOICE_NAME()" 
+                when adding Choice and DefaultChoice
+        */
         public void printChoices()
         {
             foreach(Choice choice in this.choices)
             {
-                print(choice);
+                if(choice != defaultChoice)
+                {
+                    print(choice);
+                }
             }
+
+            printDefaultChoice();
+        }
+
+        private void printDefaultChoice()
+        {
+            Console.ResetColor();
+            Console.Write("Press ");
+
+            Console.ForegroundColor = choiceColor;
+            Console.Write("Enter");
+
+            Console.ResetColor();
+            Console.Write(" OR ");
+            Console.ResetColor();
+
+            print(this.defaultChoice);
         }
 
         private void print(Choice choice)
@@ -67,12 +101,22 @@ namespace TextGame
             }
         }
 
-        internal ConsoleColor getChoiceColor()
+        public void setDefaultChoice(Choice defaultChoice)
+        {
+            this.defaultChoice = defaultChoice;
+        }
+
+        public Choice getDefaultChoice()
+        {
+            return this.defaultChoice;
+        }
+
+        public ConsoleColor getChoiceColor()
         {
             return this.choiceColor;
         }
 
-        internal void addChoice(Choice choice)
+        public void addChoice(Choice choice)
         {
             choices.Add(choice);
         }
