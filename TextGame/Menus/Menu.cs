@@ -36,7 +36,10 @@ namespace TextGame.Menus
                 }
             }
 
-            printDefaultChoice();
+            if (this.defaultChoice != null)
+            {
+                printDefaultChoice();
+            }
         }
 
         private void printDefaultChoice()
@@ -76,12 +79,17 @@ namespace TextGame.Menus
         public void runActions(string input)
         {
             input = input.ToLower();
+            input = input.Replace(" ", "");
 
             for (int i = 0; i < choices.Count; i++)
             {
                 Choice choice = choices[i];
+                String activationString = choice.getActivationString();
+                activationString = activationString.ToLower();
+                activationString = activationString.Replace(" ", "");
 
-                if (input.Equals(choice.getActivationString().ToLower()))
+
+                if (input.Equals(activationString))
                 {
                     choice.activate();
                 }
