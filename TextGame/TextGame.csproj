@@ -52,6 +52,7 @@
     <Compile Include="Choices\NewMenuChoice.cs" />
     <Compile Include="NewLinkChoice.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="PlayerShip.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

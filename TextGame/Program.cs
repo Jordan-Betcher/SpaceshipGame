@@ -10,7 +10,7 @@ namespace TextGame
     {
         public static Boolean isPlayerPlaying = true;
         public static Menu currentMenu;
-        private static PlayerShip playerShip = new PlayerShip();
+        private static Player player = new Player();
 
         static void Main(string[] args)
         {
