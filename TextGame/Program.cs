@@ -8,7 +8,7 @@ namespace TextGame
 {
     class Program
     {
-
+        //Test
         public static Boolean isPlayerPlaying = true;
         public static Menu currentMenu;
         private static PlayerShip playerShip = new PlayerShip();
