@@ -10,13 +10,20 @@ namespace TextGame
     class Program
     {
         private static Boolean isPlayerPlaying = true;
-        private static Menu currentMenu;
+        private static Menu currentMenu = new MainMenu();
         private static Player player = new Player();
-        private static Queue<Menu> menuHistory = new Queue<Menu>();
+        private static Queue<Menu> menuHistory;
+
+        private static Queue<Menu> createMenuHistory()
+        {
+            Queue<Menu> menuHistory = new Queue<Menu>();
+            menuHistory.Enqueue(currentMenu);
+            return menuHistory;
+        }
 
         static void Main(string[] args)
         {
-            currentMenu = new MainMenu();
+            menuHistory = createMenuHistory();
             gameLoop();
         }
 

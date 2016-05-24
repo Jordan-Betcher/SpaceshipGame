@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TextGame.Choices;
 
 namespace TextGame.Menus
 {
@@ -10,7 +11,7 @@ namespace TextGame.Menus
     {
         public PlayerMenu()
         {
-
+            base.addChoice(new BackChoice("Go to previous menu"));
         }
 
     }
