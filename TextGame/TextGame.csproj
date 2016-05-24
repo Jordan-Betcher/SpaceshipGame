@@ -43,24 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AirRecycler.cs" />
-    <Compile Include="Choice.cs" />
-    <Compile Include="Engine.cs" />
-    <Compile Include="Hull.cs" />
-    <Compile Include="MainMenu.cs" />
-    <Compile Include="Menu.cs" />
+    <Compile Include="SpaceShip\AirRecycler.cs" />
+    <Compile Include="Choices\Choice.cs" />
+    <Compile Include="SpaceShip\Engine.cs" />
+    <Compile Include="SpaceShip\Hull.cs" />
+    <Compile Include="Menu\MainMenu.cs" />
+    <Compile Include="Menu\Menu.cs" />
     <Compile Include="Choices\NewMenuChoice.cs" />
-    <Compile Include="NewLinkChoice.cs" />
+    <Compile Include="Choices\NewLinkChoice.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Player.cs" />
-    <Compile Include="PlayerShip.cs" />
+    <Compile Include="SpaceShip\PlayerShip.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Choices\QuitChoice.cs" />
-    <Compile Include="Sensor.cs" />
-    <Compile Include="ShipStation.cs" />
+    <Compile Include="SpaceShip\Sensor.cs" />
+    <Compile Include="SpaceShip\ShipStation.cs" />
     <Compile Include="Skills.cs" />
-    <Compile Include="Thruster.cs" />
+    <Compile Include="SpaceShip\Thruster.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
