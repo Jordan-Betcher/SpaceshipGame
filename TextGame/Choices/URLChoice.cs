@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Diagnostics;
+using TextGame.Choices;
 
 namespace TextGame
 {
-    internal class NewLinkChoice : Choice
+    internal class URLChoice : Choice
     {
         private string activationString;
         private string activationDescription;
         private string url;
 
-        public NewLinkChoice(string activationString, string activationDescription, string url)
+        public URLChoice(string activationString, string activationDescription, string url)
         {
             this.activationString = activationString;
             this.activationDescription = activationDescription;

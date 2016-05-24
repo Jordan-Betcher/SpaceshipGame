@@ -1,4 +1,5 @@
 ﻿using System;
+using TextGame.Choices;
 
 namespace TextGame
 {

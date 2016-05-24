@@ -1,4 +1,4 @@
-﻿namespace TextGame
+﻿namespace TextGame.Choices
 {
     public interface Choice
     {

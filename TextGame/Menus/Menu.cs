@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using TextGame.Choices;
 
-namespace TextGame
+namespace TextGame.Menus
 {
     public abstract class Menu
     {

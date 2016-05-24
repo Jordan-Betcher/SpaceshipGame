@@ -1,21 +1,24 @@
 ﻿using System;
+using TextGame.Choices;
 
-namespace TextGame
+namespace TextGame.Menus
 {
-    public class NewMenuChoice<menu> : Choice where menu : Menu, new()
+    public class MenuChoice : Choice
     {
         private string activationString;
         private string activationDescription;
+        private Menu newMenu;
 
-        public NewMenuChoice(String activationString, String activationDescription)
+        public MenuChoice(String activationString, String activationDescription, Menu newMenu)
         {
             this.activationString = activationString;
             this.activationDescription = activationDescription;
+            this.newMenu = newMenu;
         }
 
         public void activate()
         {
-            Program.currentMenu = new menu();
+            Program.currentMenu = newMenu;
         }
 
         public string getActivationString()
