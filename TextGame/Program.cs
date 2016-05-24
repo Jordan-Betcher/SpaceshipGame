@@ -13,13 +13,14 @@ namespace TextGame
         private static Menu currentMenu = new MainMenu();
         private static Player player = new Player();
         private static Queue<Menu> menuHistory;
-
+        ///*
         private static Queue<Menu> createMenuHistory()
         {
             Queue<Menu> menuHistory = new Queue<Menu>();
             menuHistory.Enqueue(currentMenu);
             return menuHistory;
         }
+        //*/
 
         static void Main(string[] args)
         {
@@ -64,11 +65,13 @@ namespace TextGame
 
             currentMenu = newMenu;
         }
-
+        ///*
         public static Menu getLastMenu()
         {
-            return menuHistory.Peek();
+            return menuHistory.Last();
         }
+
+        //*/
 
         public static Player getPlayer()
         {

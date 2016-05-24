@@ -11,7 +11,9 @@ namespace TextGame.Menus
     {
         public PlayerMenu()
         {
-            base.addChoice(new BackChoice("Go to previous menu"));
+            base.addChoice(new URLChoice("Google", "Opens Google", "https://www.google.com/"));
+            //base.addChoice(new MenuChoice("Player Menu", "Shows you your player stats", new PlayerMenu()));
+            //base.addChoice(new BackChoice("Go to previous menu"));
         }
 
     }

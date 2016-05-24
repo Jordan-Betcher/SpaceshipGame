@@ -9,6 +9,7 @@ namespace TextGame.Choices
 {
     class BackChoice : MenuChoice
     {
-        public BackChoice(String activationDescription) : base("Back", activationDescription, Program.getLastMenu()) { }
+        public BackChoice(String activationDescription) : base("Back", activationDescription, new MainMenu()) { }
+        //Program.getLastMenu()) { }
     }
 }
