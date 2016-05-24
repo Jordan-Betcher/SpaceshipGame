@@ -18,7 +18,7 @@ namespace TextGame.Menus
 
         public void activate()
         {
-            Program.currentMenu = newMenu;
+            Program.setCurrentMenu(newMenu);
         }
 
         public string getActivationString()

@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Choices\BackChoice.cs" />
     <Compile Include="Menus\PlayerMenu.cs" />
     <Compile Include="Menus\test.cs" />
     <Compile Include="SpaceShip\AirRecycler.cs" />

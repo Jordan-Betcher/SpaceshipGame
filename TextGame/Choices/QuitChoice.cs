@@ -7,7 +7,7 @@ namespace TextGame
     {
         public void activate()
         {
-            Program.isPlayerPlaying = false;
+            Program.endGame();
         }
 
         public string getActivationString()

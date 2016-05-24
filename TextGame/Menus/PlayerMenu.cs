@@ -4,10 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TextGame.Menu
+namespace TextGame.Menus
 {
-    class PlayerMenu
+    class PlayerMenu : Menu
     {
+        public PlayerMenu()
+        {
+
+        }
 
     }
 }

@@ -9,9 +9,10 @@ namespace TextGame
 {
     class Program
     {
-        public static Boolean isPlayerPlaying = true;
-        public static Menus.Menu currentMenu;
+        private static Boolean isPlayerPlaying = true;
+        private static Menu currentMenu;
         private static Player player = new Player();
+        private static Queue<Menu> menuHistory = new Queue<Menu>();
 
         static void Main(string[] args)
         {
@@ -39,5 +40,33 @@ namespace TextGame
 
             return Console.ReadLine();
         }
+
+        public static void endGame()
+        {
+            isPlayerPlaying = false;
+        }
+
+        public static Menu getCurrentMenu()
+        {
+            return currentMenu;
+        }
+
+        public static void setCurrentMenu(Menu newMenu)
+        {
+            menuHistory.Enqueue(currentMenu);
+
+            currentMenu = newMenu;
+        }
+
+        public static Menu getLastMenu()
+        {
+            return menuHistory.Peek();
+        }
+
+        public static Player getPlayer()
+        {
+            return player;
+        }
+
     }
 }
